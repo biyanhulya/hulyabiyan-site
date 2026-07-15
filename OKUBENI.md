@@ -3,6 +3,14 @@
 Hülya Biyan'ın kişisel yazar sitesi. **Tamamen statik** (sunucu gerektirmez),
 saf HTML/CSS/JS ile hazırlandı. Cloudflare Pages'e olduğu gibi yüklenebilir.
 
+## Bağlantılar
+- **GitHub deposu:** https://github.com/biyanhulya/hulyabiyan-site
+- **Canlı (GitHub Pages):** https://biyanhulya.github.io/hulyabiyan-site/
+- **Hedef alan adı:** hulyabiyan.com (Cloudflare)
+
+> Her güncelleme Claude tarafından otomatik olarak GitHub'a gönderilir; GitHub
+> Pages birkaç dakika içinde yeni sürümü yayınlar.
+
 ## Klasör içeriği
 ```
 index.html          Ana Sayfa
