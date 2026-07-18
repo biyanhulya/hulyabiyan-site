@@ -425,8 +425,121 @@ section { padding: 64px 0; }
   font-size: .9rem;
 }
 
+/* ---------- Projeler ---------- */
+.proje-vitrin {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 44px;
+  align-items: center;
+}
+.proje-vitrin .vitrin-gorsel img {
+  border-radius: var(--radius);
+  box-shadow: var(--golge);
+  border: 6px solid #fff;
+  width: 100%;
+}
+.proje-vitrin h2 { color: var(--mor); font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
+.proje-etiket {
+  display: inline-block;
+  background: var(--sari);
+  color: #6b4b00;
+  font-family: var(--font-baslik);
+  font-weight: 800;
+  padding: 5px 15px;
+  border-radius: 999px;
+  font-size: .9rem;
+  margin-bottom: 14px;
+}
+
+/* İstatistik/rakam kutucukları */
+.rakam-satiri {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 6px 0 0;
+}
+.rakam {
+  background: var(--kart);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--golge);
+  padding: 20px 12px;
+  text-align: center;
+}
+.rakam b {
+  display: block;
+  font-family: var(--font-baslik);
+  font-size: 2rem;
+  color: var(--mercan);
+  line-height: 1;
+}
+.rakam span { font-size: .92rem; color: var(--metin-soft); font-weight: 700; }
+
+/* Kitap vitrini */
+.kitap-vitrin {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+  background: var(--zemin-alt);
+  border-radius: var(--radius);
+  padding: 34px;
+  box-shadow: var(--golge);
+}
+.kitap-vitrin img { border-radius: var(--radius-sm); box-shadow: var(--golge); width: 100%; }
+.kitap-vitrin h3 { color: var(--mor); font-size: 1.6rem; }
+
+/* Foto galeri */
+.galeri {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.galeri figure { margin: 0; }
+.galeri img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--golge);
+  border: 4px solid #fff;
+  transition: transform .2s;
+}
+.galeri img:hover { transform: translateY(-4px) scale(1.02); }
+.galeri-genis img {
+  aspect-ratio: 16 / 7;
+  margin-bottom: 16px;
+}
+
+/* Video kutusu */
+.video-kutu {
+  background: linear-gradient(135deg, var(--deniz), var(--mor));
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--golge);
+  text-align: center;
+  color: #fff;
+}
+.video-kutu h3 { color: #fff; }
+.video-kutu video { width: 100%; max-width: 680px; border-radius: var(--radius-sm); box-shadow: 0 8px 22px rgba(0,0,0,.3); }
+
+/* Teşekkür listesi */
+.tesekkur {
+  background: var(--kart);
+  border-radius: var(--radius);
+  box-shadow: var(--golge);
+  padding: 30px 28px;
+}
+.tesekkur h3 { color: var(--mor); }
+.tesekkur ul { padding-left: 1.1em; margin: 10px 0 0; }
+.tesekkur li { margin-bottom: 6px; }
+
 /* ---------- Duyarlı (responsive) ---------- */
 @media (max-width: 860px) {
+  .proje-vitrin { grid-template-columns: 1fr; }
+  .proje-vitrin .vitrin-gorsel { order: -1; }
+  .kitap-vitrin { grid-template-columns: 1fr; text-align: center; }
+  .rakam-satiri { grid-template-columns: repeat(2, 1fr); }
+  .galeri { grid-template-columns: repeat(2, 1fr); }
   .hero-ic { grid-template-columns: 1fr; text-align: center; }
   .hero-gorsel { order: -1; }
   .hero-butonlar { justify-content: center; }
