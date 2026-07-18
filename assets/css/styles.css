@@ -533,10 +533,84 @@ section { padding: 64px 0; }
 .tesekkur ul { padding-left: 1.1em; margin: 10px 0 0; }
 .tesekkur li { margin-bottom: 6px; }
 
+/* ---------- Proje listesi + "Devamını oku" ---------- */
+.proje-liste { display: grid; gap: 34px; }
+
+.proje {
+  background: var(--kart);
+  border-radius: var(--radius);
+  box-shadow: var(--golge);
+  padding: 28px;
+  border: 1px solid var(--cizgi);
+}
+.proje-ust {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 30px;
+  align-items: center;
+}
+.proje-kapak img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--golge);
+  border: 5px solid #fff;
+}
+.proje-ozet h2 { color: var(--mor); font-size: clamp(1.5rem, 3.4vw, 2.1rem); margin-bottom: .3em; }
+.proje-meta {
+  color: var(--metin-soft);
+  font-weight: 700;
+  font-size: .95rem;
+  margin: 0 0 12px;
+}
+
+/* Açılır detay */
+.proje-detay { margin-top: 18px; }
+summary.devamini-oku {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  background: var(--mor);
+  color: #fff;
+  font-family: var(--font-baslik);
+  font-weight: 700;
+  padding: 11px 24px;
+  border-radius: 999px;
+  transition: transform .15s, box-shadow .15s, background .18s;
+  box-shadow: 0 8px 20px rgba(91,61,140,.25);
+}
+summary.devamini-oku::-webkit-details-marker { display: none; }
+summary.devamini-oku::after { content: "Devamını oku  ▾"; }
+details[open] > summary.devamini-oku::after { content: "Daha az göster  ▴"; }
+summary.devamini-oku:hover { transform: translateY(-2px); background: #4c3277; }
+
+.proje-detay-ic { margin-top: 26px; display: grid; gap: 34px; }
+.proje-detay-ic > * { margin: 0; }
+
+/* Detay içindeki alıntı (şerit yerine sade blok) */
+.proje-alinti {
+  background: linear-gradient(90deg, var(--deniz), var(--mor), var(--pembe));
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 30px;
+  text-align: center;
+}
+.proje-alinti h3 { color: #fff; font-size: clamp(1.3rem, 3vw, 1.8rem); margin-bottom: 6px; }
+.proje-alinti p { opacity: .95; margin: 0; }
+
+.proje-detay-ic .alt-baslik {
+  color: var(--mor);
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
 /* ---------- Duyarlı (responsive) ---------- */
 @media (max-width: 860px) {
   .proje-vitrin { grid-template-columns: 1fr; }
   .proje-vitrin .vitrin-gorsel { order: -1; }
+  .proje-ust { grid-template-columns: 1fr; }
+  .proje-kapak { order: -1; max-width: 360px; margin: 0 auto; }
   .kitap-vitrin { grid-template-columns: 1fr; text-align: center; }
   .rakam-satiri { grid-template-columns: repeat(2, 1fr); }
   .galeri { grid-template-columns: repeat(2, 1fr); }
