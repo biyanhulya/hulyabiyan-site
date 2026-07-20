@@ -4,9 +4,14 @@ Hülya Biyan'ın kişisel yazar sitesi. **Tamamen statik** (sunucu gerektirmez),
 saf HTML/CSS/JS ile hazırlandı. Cloudflare Pages'e olduğu gibi yüklenebilir.
 
 ## Bağlantılar
+- **🌐 CANLI SİTE: https://hulyabiyan.com/** (Cloudflare üzerinden yayında)
 - **GitHub deposu:** https://github.com/biyanhulya/hulyabiyan-site
-- **Canlı (GitHub Pages):** https://biyanhulya.github.io/hulyabiyan-site/
-- **Hedef alan adı:** hulyabiyan.com (Cloudflare)
+- **Yedek adres (GitHub Pages):** https://biyanhulya.github.io/hulyabiyan-site/
+
+> ⚠️ `www.hulyabiyan.com` şu an **522** hatası veriyor; sadece www'suz adres
+> çalışıyor. Cloudflare DNS'te `www` için bir CNAME kaydı ekleyip (hedef:
+> ana siteyle aynı) ya da www → kök adrese yönlendirme kuralı tanımlayarak
+> düzeltilebilir.
 
 > Her güncelleme Claude tarafından otomatik olarak GitHub'a gönderilir; GitHub
 > Pages birkaç dakika içinde yeni sürümü yayınlar.
