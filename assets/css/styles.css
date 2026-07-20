@@ -292,6 +292,42 @@ section { padding: 64px 0; }
   font-weight: 700; font-size: .82rem; text-decoration: none;
 }
 
+/* Satın al butonu (kitap kartlarında) */
+.satin-al {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--mercan);
+  color: #fff;
+  font-family: var(--font-baslik);
+  font-weight: 700;
+  padding: 11px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(242,118,75,.32);
+  transition: transform .15s, box-shadow .15s;
+  width: 100%;
+  justify-content: center;
+}
+.satin-al:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(242,118,75,.42); }
+.satin-al-nereden {
+  display: block;
+  text-align: center;
+  font-size: .78rem;
+  color: var(--metin-soft);
+  margin-top: 7px;
+}
+/* Ana sayfa kartlarındaki küçük satın al bağlantısı */
+.satin-al-mini {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--mercan);
+  font-weight: 800;
+  font-size: .92rem;
+  text-decoration: none;
+}
+.satin-al-mini:hover { text-decoration: underline; }
+
 /* ---------- Hakkımda ---------- */
 .hakkimda-grid {
   display: grid;
