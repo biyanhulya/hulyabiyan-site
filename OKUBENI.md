@@ -16,6 +16,24 @@ saf HTML/CSS/JS ile hazırlandı. Cloudflare Pages'e olduğu gibi yüklenebilir.
 > Her güncelleme Claude tarafından otomatik olarak GitHub'a gönderilir; GitHub
 > Pages birkaç dakika içinde yeni sürümü yayınlar.
 
+## ⚠️ Önemli: Adresler uzantısız
+Cloudflare Pages `/sayfa.html` adreslerini 308 ile `/sayfa`'ya yönlendirir.
+Bu yüzden **tüm iç bağlantılar, canonical'lar ve sitemap uzantısızdır**
+(`/kitaplarim`, `/hakkimda` … ana sayfa için `/`).
+Yeni sayfa/bağlantı eklerken `href="/sayfa"` yaz — `href="sayfa.html"` **yazma**.
+
+> Yerel önizlemede (`py -m http.server`) uzantısız adresler çalışmaz; yerelde
+> test için doğrudan `sayfa.html` dosyasını aç.
+
+## SEO dosyaları
+- `sitemap.xml` — 8 sayfa, uzantısız adreslerle
+- `robots.txt` — herkese açık + Sitemap satırı (Cloudflare kendi AI-bot
+  bloğunu bununla birleştirerek sunuyor)
+- `404.html` — Cloudflare Pages bunu gerçek 404 koduyla sunar
+- Her sayfada: canonical, og/twitter etiketleri (mutlak görsel adresi)
+- JSON-LD schema: ana sayfa (WebSite+Person), hakkımda (Person),
+  kitaplarım (Person + 3 Book)
+
 ## Klasör içeriği
 ```
 index.html          Ana Sayfa
