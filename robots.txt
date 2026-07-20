@@ -1,0 +1,7 @@
+# Yazı Güncesi — hulyabiyan.com
+# Tüm arama motorlarına ve AI asistanlarına açık.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://hulyabiyan.com/sitemap.xml

@@ -54,7 +54,8 @@ h1, h2, h3, h4 {
 
 a { color: var(--deniz-koyu); }
 
-img { max-width: 100%; display: block; }
+/* width/height öznitelikleri CLS'i önler; height:auto oranı korur */
+img { max-width: 100%; height: auto; display: block; }
 
 .kapsayici {
   width: 100%;
