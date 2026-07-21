@@ -623,6 +623,18 @@ summary.devamini-oku {
 summary.devamini-oku::-webkit-details-marker { display: none; }
 summary.devamini-oku::after { content: "Devamını oku  ▾"; }
 details[open] > summary.devamini-oku::after { content: "Daha az göster  ▴"; }
+/* Hakkımda: merak edenler için açılır özgeçmiş */
+summary.devamini-oku.ozgecmis::after { content: "Merak edenler için: kısa özgeçmişim  ▾"; }
+details[open] > summary.devamini-oku.ozgecmis::after { content: "Özgeçmişi kapat  ▴"; }
+.ozgecmis-kutu { margin-top: 26px; }
+.ozgecmis-ic {
+  margin-top: 18px;
+  background: var(--zemin-alt);
+  border-radius: var(--radius-sm);
+  padding: 22px 24px;
+}
+.ozgecmis-ic ul { margin: 0; padding-left: 1.15em; }
+.ozgecmis-ic li { margin-bottom: 8px; }
 summary.devamini-oku:hover { transform: translateY(-2px); background: #4c3277; }
 
 .proje-detay-ic { margin-top: 26px; display: grid; gap: 34px; }
