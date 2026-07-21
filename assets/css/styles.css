@@ -271,7 +271,10 @@ section { padding: 64px 0; }
   margin-bottom: 6px;
 }
 .kitap-govde .resimleyen { color: var(--metin-soft); font-size: .95rem; margin: 0 0 12px; }
-.kitap-govde p.aciklama { flex: 1; }
+.kitap-govde .aciklama { flex: 1; }
+/* Çok paragraflı tanıtımlar için */
+.kitap-govde .aciklama p { margin: 0 0 .9em; }
+.kitap-govde .aciklama p:last-child { margin-bottom: 0; }
 .kitap-alt {
   margin-top: 16px;
   display: flex;
