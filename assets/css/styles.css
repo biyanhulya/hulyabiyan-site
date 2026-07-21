@@ -635,6 +635,29 @@ details[open] > summary.devamini-oku.ozgecmis::after { content: "Özgeçmişi ka
 }
 .ozgecmis-ic ul { margin: 0; padding-left: 1.15em; }
 .ozgecmis-ic li { margin-bottom: 8px; }
+/* Roller satırı */
+.ozgecmis-roller {
+  font-family: var(--font-baslik);
+  font-weight: 700;
+  color: var(--mor);
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+}
+/* Eğitim grupları */
+.ozgecmis-ic h4 {
+  font-size: .82rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--mercan);
+  margin: 18px 0 4px;
+}
+.ozgecmis-grup { margin: 0; color: var(--metin-soft); }
+/* Dar ekranda buton etiketi tek satıra sığsın */
+@media (max-width: 620px) {
+  summary.devamini-oku.ozgecmis::after { content: "Kısa özgeçmişim  ▾"; }
+  details[open] > summary.devamini-oku.ozgecmis::after { content: "Kapat  ▴"; }
+}
+.ozgecmis-kapanis { margin: 20px 0 0; padding-top: 14px; border-top: 1px dashed var(--cizgi); }
 summary.devamini-oku:hover { transform: translateY(-2px); background: #4c3277; }
 
 .proje-detay-ic { margin-top: 26px; display: grid; gap: 34px; }
